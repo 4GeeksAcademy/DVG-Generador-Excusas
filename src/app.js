@@ -7,7 +7,7 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  document.querySelector("#excusa").innerHTML = generateExcuse();
+  document.querySelector("#excuse").innerHTML = generateExcuse();
 };
 
 let generateExcuse = () => {
@@ -27,5 +27,14 @@ let generateExcuse = () => {
   let whatIndex = Math.floor(Math.random() * what.length);
   let whenIndex = Math.floor(Math.random() * when.length);
 
-  return whoIndex + "" + actionIndex + "" + whatIndex + "" + whenIndex + ".";
+  return (
+    who[whoIndex] +
+    " " +
+    action[actionIndex] +
+    " " +
+    what[whatIndex] +
+    " " +
+    when[whenIndex] +
+    "."
+  );
 };
